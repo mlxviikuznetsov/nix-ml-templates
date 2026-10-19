@@ -1,0 +1,26 @@
+[project]
+name = "classic-ml"
+version = "0.1.0"
+description = "Classic ML: numpy, pandas, scikit-learn, JupyterLab"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "numpy",
+  "pandas",
+  "scikit-learn",
+  "matplotlib",
+  "jupyterlab>=4",
+  "ipykernel",
+]
+
+[project.scripts]
+train = "classic_ml.train:main"
+
+[dependency-groups]
+dev = [
+  "ruff",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

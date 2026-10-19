@@ -1,0 +1,33 @@
+[project]
+name = "torch-playground"
+version = "0.1.0"
+description = "Deep learning with PyTorch (CPU)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "torch",
+  "numpy",
+  "matplotlib",
+  "jupyterlab>=4",
+  "ipykernel",
+]
+
+[project.scripts]
+train = "torch_playground.train:main"
+
+[dependency-groups]
+dev = [
+  "ruff",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

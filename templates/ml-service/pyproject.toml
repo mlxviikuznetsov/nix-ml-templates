@@ -1,0 +1,29 @@
+[project]
+name = "ml-service"
+version = "0.1.0"
+description = "ML package with a CLI (typer) and an HTTP service (FastAPI)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "scikit-learn",
+  "fastapi",
+  "uvicorn",
+  "typer",
+]
+
+[project.scripts]
+ml-service = "ml_service.cli:app"
+
+[dependency-groups]
+dev = [
+  "pytest",
+  "httpx",
+  "ruff",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -1,0 +1,23 @@
+[project]
+name = "jupyter-playground"
+version = "0.1.0"
+description = "Jupyter notebooks: numpy, pandas, matplotlib"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "jupyterlab>=4",
+  "ipykernel",
+  "numpy",
+  "pandas",
+  "matplotlib",
+  "jupytext",
+]
+
+[dependency-groups]
+dev = [
+  "ruff",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
