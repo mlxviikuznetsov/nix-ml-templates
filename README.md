@@ -1,4 +1,4 @@
-# nix-ml-templates
+# Nix Machine Learning Templates
 
 Flake templates for ML/DS projects in Python on Nix/NixOS. Dependencies are managed with
 [uv](https://docs.astral.sh/uv/) + [uv2nix](https://github.com/pyproject-nix/uv2nix); CPU only.
